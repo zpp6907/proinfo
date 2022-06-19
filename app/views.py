@@ -45,4 +45,9 @@ def user_add(request):
     return render(request, 'user_add.html', {"form": form})
 
 
+def test(request):
+    """添加用户"""
+    return render(request, 'index.html')
+
+
 

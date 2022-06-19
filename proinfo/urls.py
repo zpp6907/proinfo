@@ -21,4 +21,6 @@ urlpatterns = [
     path('depart/list/', views.depart_list),
 
     path('user/add/', views.user_add),
+
+    path('', views.test),
 ]
