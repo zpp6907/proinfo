@@ -1,0 +1,82 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>注册</title>
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href={% static "css/bootstrap.min2.css" %}>
+    <link href="{% static "css/gloab.css" %}" rel="stylesheet">
+    <link href="{% static "css/bootstrap.min3.css" %}" rel="stylesheet">
+    <link href="{% static "css/index.css" %}" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="{% static "css/floating-labels.css" %}" rel="stylesheet">
+    <script src="{% static "js/Scripts/jquery-1.11.1.min.js" %}"></script>
+    <script src="{% static "js/Scripts/register.js" %}"></script>
+
+    <style>
+        .pull-left {
+            border-radius: 0;
+            font-size: 0.8rem;
+            float: left;
+        }
+
+        .text {
+            font-size: 0.8rem;
+        }
+
+
+    </style>
+</head>
+
+<body>
+
+<form class="form-signin">
+    <div class="text-center mb-4">
+        <h1 class="h3 mb-3 font-weight-normal">注册</h1>
+    </div>
+    <span class="intelligent-label f-fl"><b class="ftx04">*</b>用户名：</span>
+    <div class="form-label-group">
+        <input type="text" id="inputEmail" class="form-control" tabindex="1"
+               data-valid="isNonEmpty||between:3-20||isUname"
+               data-error="用户名不能为空||用户名长度3-20位||只能输入中文、字母、数字、下划线，且以中文或字母开头">
+        <label for="inputEmail">用户名</label>
+
+
+    </div>
+
+    <div class="form-label-group">
+        <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+        <label for="inputPassword">密码</label>
+    </div>
+
+    <div class="form-label-group">
+        <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+        <label for="inputPassword"></label>
+    </div>
+
+    <div class="form-label-group">
+        <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+        <label for="inputPassword">余额</label>
+    </div>
+
+    <div class="form-label-group">
+        <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+        <label for="inputPassword">id</label>
+    </div>
+
+    <div class="checkbox mb-3">
+        <div class="text-right">
+            <div class="pull-left">已有账号，<a href="/logon" class="link">登录</a></div>
+            <p class="text">注册即代表您已阅读并同意《<a href="javascript:;" target="_blank" class="link">使用协议</a>》</p>
+        </div>
+    </div>
+    <button class="btn btn-lg btn-primary btn-block" type="submit">登录</button>
+    <p class="mt-5 mb-3 text-muted text-center">&copy; 2021-2027</p>
+</form>
+</body>
+
+</html>

@@ -49,5 +49,10 @@ def test(request):
     """添加用户"""
     return render(request, 'index.html')
 
-
+def logon(request):
+    """用户信息"""
+    return render(request, 'logon.html')
+def login(request):
+    """用户信息"""
+    return render(request, 'index2.html')
 

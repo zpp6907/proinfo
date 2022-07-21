@@ -1,0 +1,62 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>登录</title>
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href={% static "css/bootstrap.min2.css" %}>
+
+    <!-- Custom styles for this template -->
+    <link href="{% static "css/floating-labels.css" %}" rel="stylesheet">
+
+
+    <style>
+        .pull-right {
+            border-radius: 0;
+            float: right;
+            font-size: 0.8rem;
+        }
+
+        .split-space {
+            margin: 0 10px;
+            color: #18BC9C;
+            font-size: 0.8rem;
+        }
+
+    </style>
+</head>
+
+<body>
+
+<form class="form-signin">
+    <div class="text-center mb-4">
+        <h1 class="h3 mb-3 font-weight-normal">登录</h1>
+    </div>
+
+    <div class="form-label-group">
+        <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
+        <label for="inputEmail">Email</label>
+    </div>
+
+    <div class="form-label-group">
+        <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+        <label for="inputPassword">密码</label>
+    </div>
+
+    <div class="checkbox mb-3">
+        <label>
+            <input type="checkbox" value="remember-me"> 记住我
+        </label>
+        <div class="pull-right" style="margin-top: 6px"><a href="javascript:;" class="link">忘记密码</a><span
+                class="split-space">|</span><a href="/login" class="link">新用户注册</a></div>
+    </div>
+    <button class="btn btn-lg btn-primary btn-block" type="submit" href = "/logon/input" >登录</button>
+    <p class="mt-5 mb-3 text-muted text-center">&copy; 2021-2027</p>
+</form>
+</body>
+
+</html>

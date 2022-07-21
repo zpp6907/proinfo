@@ -16,6 +16,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from app import views
+from app.view import account
 
 urlpatterns = [
     path('depart/list/', views.depart_list),
@@ -23,4 +24,15 @@ urlpatterns = [
     path('user/add/', views.user_add),
 
     path('', views.test),
+
+    path('index2', views.login),
+
+    path('logon', views.logon),
+
+
+
+    path('login/input', account.login),
+
+    path('logon/input', account.logon),
+
 ]

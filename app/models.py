@@ -29,3 +29,18 @@ class UserInfo(models.Model):
     )
 
     gender = models.SmallIntegerField(verbose_name="性别", choices=gender_choices)
+
+
+class User(models.Model):
+    """员工表"""
+    username = models.CharField(verbose_name='用户名', max_length=32)
+    password = models.CharField(verbose_name='密码', max_length=32)
+    mail = models.CharField(verbose_name='邮箱', max_length=32)
+    account = models.DecimalField(verbose_name='账户余额', max_digits=10, decimal_places=2, default=2)
+    creat_time = models.DateTimeField(verbose_name='创建时间')
+
+    # 级联删除
+    # depart = models.ForeignKey(verbose_name='部门',to="Department", to_field="id", on_delete=models.CASCADE)
+
+    # 清空
+    # depart = models.ForeignKey(to="Department", to_fields="id", null = True , blank= True, on_delete=models.SET_NULL)
